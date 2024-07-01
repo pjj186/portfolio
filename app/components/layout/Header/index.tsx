@@ -28,7 +28,7 @@ const Header = () => {
       </NavbarBrand>
       <NavbarContent className='flex gap-6' justify='center'>
         {LinkItems.map((item) => (
-          <NavbarItem>
+          <NavbarItem key={item}>
             <Link color='foreground' href={`#${item}`}>
               {item}
             </Link>
