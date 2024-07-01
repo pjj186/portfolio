@@ -1,3 +1,21 @@
+import {
+  EducationSection,
+  ExperienceSection,
+  IntroduceSection,
+  OtherExperienceSection,
+  ProjectsSection,
+  SkillSection,
+} from "@components/sections";
+
 export default function Home() {
-  return <div>Hello world!</div>;
+  return (
+    <>
+      <IntroduceSection />
+      <ExperienceSection />
+      <SkillSection />
+      <EducationSection />
+      <ProjectsSection />
+      <OtherExperienceSection />
+    </>
+  );
 }
