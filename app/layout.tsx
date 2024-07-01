@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "./providers";
+import { Header } from "@components/layout";
+import Providers from "providers";
 
 export const metadata: Metadata = {
   title: "Lenny's Portfolio",
@@ -14,8 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='dark text-foreground bg-background'>
-        <Providers>{children}</Providers>
+      <body>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );
