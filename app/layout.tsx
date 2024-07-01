@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import { NextUIProvider } from "@nextui-org/react";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Lenny's Portfolio",
@@ -17,9 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <NextUIProvider>
-        <body className={inter.className}>{children}</body>
-      </NextUIProvider>
+      <body className='dark text-foreground bg-background'>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
