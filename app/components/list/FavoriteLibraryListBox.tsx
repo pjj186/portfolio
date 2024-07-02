@@ -13,30 +13,35 @@ const libs = [
     name: "Next.js",
     icon: <RiNextjsFill size={15} />,
     desc: "React 개발에 Next가 빠지면 섭하죠!",
+    link: "https://nextjs.org/",
   },
   {
     id: 2,
     name: "Material-UI",
     icon: <SiMui size={15} />,
     desc: "저는 Material-UI 커스텀 장인!",
+    link: "https://mui.com/",
   },
   {
     id: 3,
     name: "Next-UI",
     icon: <SiNextui size={15} />,
     desc: "이 페이지를 만들며 사랑에 빠졌습니다.",
+    link: "https://nextui.org/",
   },
   {
     id: 4,
     name: "React-Hook-Form",
     icon: <SiReacthookform size={15} />,
     desc: "폼을 다루는데 최고의 라이브러리!",
+    link: "https://react-hook-form.com/",
   },
   {
     id: 5,
     name: "Tanstack-Query",
     icon: <SiReactquery size={15} />,
     desc: "강력한 비동기 상태관리 라이브러리!",
+    link: "https://tanstack.com/query/latest",
   },
 ];
 
@@ -53,9 +58,16 @@ const FavoriteLibraryListBox = () => {
         }}
         items={libs}
         variant='flat'
+        label='Favorite Library List'
       >
         {(item) => (
-          <ListboxItem key={item.id} textValue={item.name}>
+          <ListboxItem
+            key={item.id}
+            textValue={item.name}
+            as={"a"}
+            href={item.link}
+            target='_blank'
+          >
             <div className='flex gap-2 items-center'>
               <Button
                 variant='bordered'

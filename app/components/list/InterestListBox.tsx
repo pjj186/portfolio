@@ -30,6 +30,7 @@ const InterestListBox = () => {
         }}
         items={techs}
         variant='flat'
+        label='Techs'
       >
         {(item) => (
           <ListboxItem key={item.id} textValue={item.name}>
