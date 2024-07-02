@@ -21,7 +21,7 @@ const IntroduceSection = () => {
           <FavoriteLibraryListBox />
         </div>
         <div>
-          <Card>
+          <Card className='p-4'>
             <CardHeader className='pb-0 pt-2 px-4 flex-col items-start'>
               <h2 className='font-bold text-3xl underline underline-offset-8'>
                 Introduce.
@@ -48,6 +48,7 @@ const IntroduceSection = () => {
                 <br />
                 개발 도중 새롭게 배운 지식을 공유하고, 동료가 어려움을 겪고있는
                 부분을 해결하고 해당 내용에 대해 문서화하는 것을 좋아합니다.
+                <br />
               </p>
             </CardBody>
           </Card>
