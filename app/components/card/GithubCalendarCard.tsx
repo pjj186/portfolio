@@ -12,7 +12,7 @@ const GithubCalendarCard = () => {
         <p className='text-large uppercase font-bold'>커밋 콘서트 🎵</p>
       </CardHeader>
       <CardBody>
-        <GitHubCalendar username='pjj186' blockSize={7} />
+        <GitHubCalendar username='pjj186' blockSize={6.5} />
       </CardBody>
     </Card>
   );
