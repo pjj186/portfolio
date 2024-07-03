@@ -16,9 +16,9 @@ import { SiVelog } from "react-icons/si";
 const LinkItems = [
   "Introduce.",
   "Experience.",
-  "Skill.",
-  "Education.",
   "Projects.",
+  "Education.",
+  "Skill.",
   "Other Experience.",
 ];
 
