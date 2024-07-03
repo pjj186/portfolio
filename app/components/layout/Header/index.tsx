@@ -17,8 +17,8 @@ const LinkItems = [
   "Introduce.",
   "Experience.",
   "Projects.",
-  "Education.",
   "Skill.",
+  "Education.",
   "Other Experience.",
 ];
 
