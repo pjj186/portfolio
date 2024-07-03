@@ -1,3 +1,5 @@
+"use client";
+
 const EducationSection = () => {
   return (
     <div id='Education.' className='container'>

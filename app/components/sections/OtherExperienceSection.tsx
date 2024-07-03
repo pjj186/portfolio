@@ -1,3 +1,5 @@
+"use client";
+
 const OtherExperienceSection = () => {
   return (
     <div id='Other Experience.' className='container'>

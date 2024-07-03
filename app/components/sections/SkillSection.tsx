@@ -1,3 +1,5 @@
+"use client";
+
 const SkillSection = () => {
   return (
     <div id='Skill.' className='container'>

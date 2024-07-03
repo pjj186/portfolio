@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { MoonIcon, SunIcon } from "@assets/icons";
 import { Switch } from "@nextui-org/react";
