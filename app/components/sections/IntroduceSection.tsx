@@ -29,7 +29,8 @@ const IntroduceSection = () => {
             </CardHeader>
             <CardBody className='overflow-visible py-2 px-4 mt-2'>
               <p className='text-sm'>
-                안녕하세요. <strong>why </strong>에 집중하는 프론트엔드 개발자
+                안녕하세요. <strong>why </strong>에 집중하는 2년차 프론트엔드
+                개발자
                 <strong> 박종재(Lenny) </strong>입니다.
                 <br />
                 사용하는 모든 기술을 최대한 이해하려하고, 왜 사용하는지에 대해
