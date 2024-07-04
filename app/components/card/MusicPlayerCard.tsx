@@ -17,10 +17,26 @@ import {
   Slider,
 } from "@nextui-org/react";
 import React from "react";
+import confetti from "canvas-confetti";
 import { calculateElapsedDays } from "utils/day";
 
 const MusicPlayerCard = () => {
   const [liked, setLiked] = React.useState(false);
+  const confettiButtonRef = React.useRef<HTMLButtonElement>(null);
+
+  const handleConfetti = () => {
+    if (confettiButtonRef.current) {
+      const rect = confettiButtonRef.current.getBoundingClientRect();
+      const x = (rect.left + rect.right) / 2 / window.innerWidth;
+      const y = (rect.top + rect.bottom) / 2 / window.innerHeight;
+
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y, x },
+      });
+    }
+  };
 
   const startDate = "2023.12.04";
 
@@ -105,10 +121,12 @@ const MusicPlayerCard = () => {
               <Popover placement='bottom' showArrow={true}>
                 <PopoverTrigger>
                   <Button
+                    ref={confettiButtonRef}
                     isIconOnly
                     className='w-auto h-auto data-[hover]:bg-foreground/10 animate-pulse'
                     radius='full'
                     variant='light'
+                    onClick={handleConfetti}
                   >
                     <PauseCircleIcon size={54} />
                   </Button>

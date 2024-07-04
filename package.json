@@ -13,6 +13,7 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@nextui-org/react": "^2.4.2",
+    "canvas-confetti": "^1.9.3",
     "framer-motion": "^11.2.12",
     "next": "14.2.4",
     "next-themes": "^0.3.0",
@@ -22,6 +23,7 @@
     "react-icons": "^5.2.1"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.6.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
