@@ -1,6 +1,7 @@
 import { Button, Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { FaGithub } from "react-icons/fa";
 import { CiLink } from "react-icons/ci";
+import NextImage from "next/image";
 
 const projects = [
   {
@@ -52,7 +53,12 @@ const ToyTabContents = () => {
                 <Card key={project.id} shadow='sm' className='w-full h-full'>
                   <CardBody className='overflow-visible p-0 w-full h-full'>
                     <Image
+                      as={NextImage}
                       alt='thumb'
+                      priority={true}
+                      width={0}
+                      height={0}
+                      sizes='100vw'
                       className='aspect-square object-cover w-full h-full'
                       src={project.thumb}
                     />

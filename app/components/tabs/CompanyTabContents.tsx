@@ -1,5 +1,6 @@
 import { Card, CardBody, Image, CardFooter } from "@nextui-org/react";
 import { PiBagSimpleBold } from "react-icons/pi";
+import NextImage from "next/image";
 
 const projects = [
   {
@@ -36,7 +37,12 @@ const CompanyTabContents = () => {
                 <Card key={project.id} shadow='sm' className='w-full h-full'>
                   <CardBody className='overflow-visible p-0 w-full h-full'>
                     <Image
+                      as={NextImage}
                       alt='thumb'
+                      priority={true}
+                      width={0}
+                      height={0}
+                      sizes='100vw'
                       className='aspect-square object-cover w-full h-full'
                       src={project.thumb}
                     />
