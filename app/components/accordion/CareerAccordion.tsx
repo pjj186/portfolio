@@ -20,8 +20,8 @@ const CareerAccordion = () => {
         }
         subtitle={
           <>
-            <div className='flex items-center'>
-              <CiCalendar className='inline-block mr-1' />
+            <div className='flex items-center gap-1'>
+              <CiCalendar className='inline-block' />
               <p>2023.12. - (현재 재직중)</p>
             </div>
             <div className='mt-1'>
@@ -49,8 +49,8 @@ const CareerAccordion = () => {
         }
         subtitle={
           <>
-            <div className='flex items-center'>
-              <CiCalendar className='inline-block mr-1' />
+            <div className='flex items-center gap-1'>
+              <CiCalendar className='inline-block' />
               <p>2022.06. - 2023.11. (약 1년 6개월)</p>
             </div>
             <div className='mt-1 flex gap-2'>

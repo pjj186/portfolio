@@ -2,7 +2,17 @@ import { Card, CardBody, Image, CardFooter } from "@nextui-org/react";
 import { PiBagSimpleBold } from "react-icons/pi";
 import NextImage from "next/image";
 
-const projects = [
+export interface CompanyProject {
+  id: number;
+  name: string;
+  company: string;
+  desc: string;
+  thumb: string;
+  link: string;
+  isEnabled: boolean;
+}
+
+const projects: CompanyProject[] = [
   {
     id: 1,
     name: "WIKE",
@@ -34,8 +44,13 @@ const CompanyTabContents = () => {
           <div className='grid sm:grid-cols-4 grid-cols-2 grid-rows-1 gap-4'>
             {projects.map((project) => {
               return (
-                <Card key={project.id} shadow='sm' className='w-full h-full'>
-                  <CardBody className='overflow-visible p-0 w-full h-full'>
+                <Card
+                  key={project.id}
+                  shadow='sm'
+                  className='w-full h-full'
+                  onClick={() => console.log("Clicked!")}
+                >
+                  <CardBody className='overflow-visible p-0 w-full h-full cursor-pointer'>
                     <Image
                       as={NextImage}
                       alt='thumb'
@@ -43,6 +58,7 @@ const CompanyTabContents = () => {
                       width={0}
                       height={0}
                       sizes='100vw'
+                      isZoomed
                       className='aspect-square object-cover w-full h-full'
                       src={project.thumb}
                     />

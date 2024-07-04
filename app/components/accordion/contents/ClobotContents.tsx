@@ -67,34 +67,32 @@ const ClobotContents = () => {
       </div>
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} size='2xl'>
         <ModalContent>
-          {() => (
-            <>
-              <ModalHeader className='flex flex-col gap-1'>
-                배운점 및 아쉬웠던 점
-              </ModalHeader>
-              <ModalBody>
-                <h3 className='font-bold text-xl underline underline-offset-8'>
-                  배운점
-                </h3>
-                <ul className='text-sm'>
-                  <li className='flex items-center gap-2'>
-                    <PiBagSimpleBold />
-                    준비중입니다!
-                  </li>
-                </ul>
-                <h3 className='font-bold text-xl underline underline-offset-8'>
-                  아쉬웠던 점
-                </h3>
-                <ul className='text-sm'>
-                  <li className='flex items-center gap-2'>
-                    <PiBagSimpleBold />
-                    준비중입니다!
-                  </li>
-                </ul>
-              </ModalBody>
-              <ModalFooter />
-            </>
-          )}
+          <>
+            <ModalHeader className='flex flex-col gap-1'>
+              배운점 및 아쉬웠던 점
+            </ModalHeader>
+            <ModalBody>
+              <h3 className='font-bold text-xl underline underline-offset-8'>
+                배운점
+              </h3>
+              <ul className='text-sm'>
+                <li className='flex items-center gap-2'>
+                  <PiBagSimpleBold />
+                  준비중입니다!
+                </li>
+              </ul>
+              <h3 className='font-bold text-xl underline underline-offset-8'>
+                아쉬웠던 점
+              </h3>
+              <ul className='text-sm'>
+                <li className='flex items-center gap-2'>
+                  <PiBagSimpleBold />
+                  준비중입니다!
+                </li>
+              </ul>
+            </ModalBody>
+            <ModalFooter />
+          </>
         </ModalContent>
       </Modal>
     </>
