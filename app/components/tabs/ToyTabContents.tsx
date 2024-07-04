@@ -10,7 +10,6 @@ const projects = [
     desc: "이 웹페이지는 당신을 축하해줍니다.",
     thumb: "/images/toy-projects/omedetou-thumb.png",
     link: "https://pjj186.github.io/omedetou/",
-    isEnabled: false,
   },
   {
     id: 2,
@@ -19,7 +18,6 @@ const projects = [
     desc: "오늘 어디서 밥먹지..?",
     thumb: "/images/toy-projects/what-eat-today-thumb.png",
     link: "https://pjj186.github.io/serach-restaurant/",
-    isEnabled: true,
   },
   {
     id: 3,
@@ -28,7 +26,6 @@ const projects = [
     desc: "원신 캐릭터를 주제로 만든 MBTI 테스트",
     thumb: "/images/toy-projects/genshin-mbti-thumb.jpeg",
     link: "https://pjj186.github.io/genshin_MBTI/",
-    isEnabled: true,
   },
   {
     id: 4,
@@ -37,7 +34,6 @@ const projects = [
     desc: "배트맨 컨셉의 카카오톡 클론 HTML/CSS",
     thumb: "/images/toy-projects/battalk-thumb.png",
     link: "https://pjj186.github.io/battalk/",
-    isEnabled: true,
   },
 ];
 
