@@ -9,6 +9,7 @@ import {
 } from "@nextui-org/react";
 import { FaReact } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
 import { SiCss3, SiHtml5, SiJavascript } from "react-icons/si";
 import NextImage from "next/image";
 import { renderParagraphs } from "utils/paragraphs";
@@ -22,7 +23,7 @@ interface ProjectModalContentProps {
 
 interface projectsDetail {
   [key: string]: {
-    results: string[];
+    images: string[];
     background: string;
     meaning: string;
     skills: {
@@ -34,7 +35,7 @@ interface projectsDetail {
 
 const projectsDetail: projectsDetail = {
   omedetou: {
-    results: [
+    images: [
       "/images/toy-projects/results/omedetou/omedetou-result-1.png",
       "/images/toy-projects/results/omedetou/omedetou-result-2.png",
     ],
@@ -44,6 +45,7 @@ const projectsDetail: projectsDetail = {
       "기술적인 면에서 큰 의미를 얻었다기보다, 저의 문득 떠오른 아이디어로 여러 사람이 흥미를 느꼈다는 점이 의미가 있었던 프로젝트였습니다. 심심해서 만든 제 omedetou 프로젝트가 몇몇 사람들에게는 감동을 주었다는점이 개발자로써 많은 사람들에게 좋은 영향을 끼치는 프로젝트를 많이 만들어 보고싶다! 라는 생각이 들게 한 프로젝트입니다!",
     skills: [
       { name: "React", icon: <FaReact size={25} /> },
+      { name: "TypeScript", icon: <SiTypescript size={25} /> },
       {
         name: "Github-Pages",
         icon: <FaGithub size={25} />,
@@ -51,7 +53,7 @@ const projectsDetail: projectsDetail = {
     ],
   },
   "search-restaurant": {
-    results: [
+    images: [
       "/images/toy-projects/results/search-restaurant/search-restaurant-result-1.png",
       "/images/toy-projects/results/search-restaurant/search-restaurant-result-2.png",
       "/images/toy-projects/results/search-restaurant/search-restaurant-result-3.png",
@@ -63,13 +65,17 @@ const projectsDetail: projectsDetail = {
     skills: [
       { name: "React", icon: <FaReact size={25} /> },
       {
+        name: "JavaScript",
+        icon: <SiJavascript size={25} />,
+      },
+      {
         name: "Github-Pages",
         icon: <FaGithub size={25} />,
       },
     ],
   },
   "genshin-mbti": {
-    results: [
+    images: [
       "/images/toy-projects/results/genshin-mbti/genshin-mbti-result-1.png",
       "/images/toy-projects/results/genshin-mbti/genshin-mbti-result-2.png",
       "/images/toy-projects/results/genshin-mbti/genshin-mbti-result-3.png",
@@ -99,7 +105,7 @@ const projectsDetail: projectsDetail = {
     ],
   },
   battalk: {
-    results: [
+    images: [
       "/images/toy-projects/results/battalk/battalk-result-1.png",
       "/images/toy-projects/results/battalk/battalk-result-2.png",
       "/images/toy-projects/results/battalk/battalk-result-3.png",
@@ -131,20 +137,17 @@ const ToyProjectModalContent = ({ project }: ProjectModalContentProps) => {
     <>
       <ModalHeader className='flex flex-col gap-1'>{project.name}</ModalHeader>
       <ModalBody>
-        <h3 className='font-bold text-2xl underline underline-offset-8'>
-          결과물
-        </h3>
         <div className='w-full grid grid-cols-2 gap-2'>
-          {projectsDetail[project.id].results.map((result) => {
+          {projectsDetail[project.id].images.map((image) => {
             return (
               <Image
                 as={NextImage}
-                alt='result'
+                alt='image'
                 priority={true}
                 width={0}
                 height={0}
                 sizes='100vw'
-                src={result}
+                src={image}
                 className='object-contain w-full h-full rounded-none'
               />
             );

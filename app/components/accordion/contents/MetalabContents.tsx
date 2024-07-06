@@ -15,6 +15,7 @@ import { RiNextjsFill } from "react-icons/ri";
 import { SiPrisma } from "react-icons/si";
 import { SiPlanetscale } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
+import { SiVercel } from "react-icons/si";
 
 const usedSkills = [
   {
@@ -46,6 +47,11 @@ const usedSkills = [
     id: 6,
     content: "AWS EC2",
     icon: <FaAws size={25} />,
+  },
+  {
+    id: 7,
+    content: "Vercel",
+    icon: <SiVercel size={25} />,
   },
 ];
 

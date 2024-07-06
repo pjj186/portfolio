@@ -1,9 +1,19 @@
-import { Card, CardBody, Image, CardFooter } from "@nextui-org/react";
+import React from "react";
+import {
+  Card,
+  CardBody,
+  Image,
+  CardFooter,
+  useDisclosure,
+  Modal,
+  ModalContent,
+} from "@nextui-org/react";
 import { PiBagSimpleBold } from "react-icons/pi";
 import NextImage from "next/image";
+import CompanyProjectModalContent from "@components/modal/CompanyProjectModalContent";
 
 export interface CompanyProject {
-  id: number;
+  id: string;
   name: string;
   company: string;
   desc: string;
@@ -14,18 +24,18 @@ export interface CompanyProject {
 
 const projects: CompanyProject[] = [
   {
-    id: 1,
+    id: "wike",
     name: "WIKE",
-    company: "메타랩",
+    company: "메타랩 (2022.06 - 2023.11)",
     desc: "자전거 여행자들을 위한 플랫폼",
     thumb: "/images/wike/thumb.png",
     link: "",
     isEnabled: false,
   },
   {
-    id: 2,
+    id: "koreaguide",
     name: "Korea Guide",
-    company: "메타랩",
+    company: "메타랩 (2022.06 - 2023.11)",
     desc: "외국인들을 대상으로 한국 여행 상품을 판매하는 사이트",
     thumb: "/images/korea-guide/thumb.png",
     link: "https://www.koreaguide.center/",
@@ -34,6 +44,16 @@ const projects: CompanyProject[] = [
 ];
 
 const CompanyTabContents = () => {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const [selectedProject, setSelectedProject] =
+    React.useState<CompanyProject>();
+
+  const handleCardClick = (project: CompanyProject) => {
+    setSelectedProject(project);
+    onOpen();
+  };
+
   return (
     <>
       <p className='text-sm text-foreground/50 text-center'>
@@ -44,13 +64,11 @@ const CompanyTabContents = () => {
           <div className='grid sm:grid-cols-4 grid-cols-2 grid-rows-1 gap-4'>
             {projects.map((project) => {
               return (
-                <Card
-                  key={project.id}
-                  shadow='sm'
-                  className='w-full h-full'
-                  onClick={() => console.log("Clicked!")}
-                >
-                  <CardBody className='overflow-visible p-0 w-full h-full cursor-pointer'>
+                <Card key={project.id} shadow='sm' className='w-full h-full'>
+                  <CardBody
+                    className='overflow-visible p-0 w-full h-full cursor-pointer'
+                    onClick={() => handleCardClick(project)}
+                  >
                     <Image
                       as={NextImage}
                       alt='thumb'
@@ -90,6 +108,18 @@ const CompanyTabContents = () => {
           </div>
         </CardBody>
       </Card>
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        size='2xl'
+        scrollBehavior='inside'
+      >
+        <ModalContent>
+          {selectedProject && (
+            <CompanyProjectModalContent project={selectedProject} />
+          )}
+        </ModalContent>
+      </Modal>
     </>
   );
 };
