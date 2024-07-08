@@ -7,7 +7,7 @@ const CareerAccordion = () => {
   return (
     <Accordion selectionMode='multiple'>
       <AccordionItem
-        key='1'
+        key='clobot-career'
         aria-label='Clobot'
         startContent={
           <Avatar
@@ -36,7 +36,7 @@ const CareerAccordion = () => {
         <ClobotContents />
       </AccordionItem>
       <AccordionItem
-        key='2'
+        key='metalab-career'
         aria-label='MetaLab'
         startContent={
           <Avatar
