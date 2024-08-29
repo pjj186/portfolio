@@ -4,7 +4,6 @@
 
 - Introduce.
 - Experience.
-- Skill.
-- Education.
 - Projects.
-- Other Experience.
+- Skill.
+- Certificate.
