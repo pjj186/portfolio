@@ -18,8 +18,7 @@ const LinkItems = [
   "Experience.",
   "Projects.",
   "Skill.",
-  "Education.",
-  "Other Experience.",
+  "Certificate.",
 ];
 
 const Header = () => {
